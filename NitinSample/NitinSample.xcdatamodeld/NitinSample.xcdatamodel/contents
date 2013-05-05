@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NJMedia" representedClassName="NJMedia" syncable="YES">
+        <attribute name="mediaHash" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="NJUser" inverseName="medias" inverseEntity="NJUser" syncable="YES"/>
+    </entity>
+    <entity name="NJUser" representedClassName="NJUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="medias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NJMedia" inverseName="user" inverseEntity="NJMedia" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="NJMedia" positionX="0" positionY="0" width="128" height="73"/>
+        <element name="NJUser" positionX="-351" positionY="-132" width="128" height="88"/>
+    </elements>
+</model>
